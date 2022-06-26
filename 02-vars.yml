@@ -24,3 +24,9 @@
         msg: URL = {{ URL }}
       vars:
         URL: tasks.example.com
+- name: vars from Inventory
+  hosts: localhost
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
