@@ -41,3 +41,13 @@
     - name: Print FQDN
       ansible.builtin.debug:
         msg: "{{ ansible_fqdn }}"
+
+- name:
+  hosts: localhost
+  tasks:
+    - name: run uptime command
+      ansible.builtin.shell: uptime
+      register: output
+    - name: Print output of shell command
+      ansible.builtin.debug:
+        msg: "{{output}}"
