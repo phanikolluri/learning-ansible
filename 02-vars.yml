@@ -26,7 +26,7 @@
         URL: tasks.example.com
         
 - name: vars from Inventory
-  hosts: localhost
+  hosts: all
   tasks:
     - name: Print URL
       ansible.builtin.debug:
