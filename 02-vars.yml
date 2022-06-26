@@ -42,7 +42,7 @@
       ansible.builtin.debug:
         msg: "{{ ansible_fqdn }}"
 
-- name:
+- name: register variables
   hosts: localhost
   tasks:
     - name: run uptime command
